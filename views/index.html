@@ -11,7 +11,8 @@
   </head>
   <body>
 
-    <!-- Header -->
+    <div id="left">
+      <!-- Header -->
       <header id="header">
         <h1>{{ cosmic.object.home.metadata.headline }}</h1>
         <div>{{{ cosmic.object.home.content }}}</div>
@@ -22,17 +23,25 @@
         <input type="submit" value="{{ cosmic.object.home.metadata.button_text }}" />
       </form>
 
-    <!-- Footer -->
+      <!-- Footer -->
       <footer id="footer">
         <ul class="icons">
           {{# cosmic.object.home.metadata.email }}
-            <li><a target="_blank" href="mailto:{{ cosmic.object.home.metadata.email }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
+          <li><a target="_blank" href="mailto:{{ cosmic.object.home.metadata.email }}" class="icon fa-envelope-o"><span class="label">Email</span></a></li>
           {{/ cosmic.object.home.metadata.email }}
         </ul>
         <ul class="copyright">
           <li>&copy; {{ year }} {{ cosmic.object.home.metadata.company_name }}</li>
         </ul>
       </footer>
+    </div>
+
+    <div id="right">
+      <div id="callout">
+        {{{ cosmic.object.home.metadata.callout }}}
+      </div>
+    </div>
+
     <!-- Scripts -->
       <!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
       <script id="bg_images" type="application/json">{{{ bg_images }}}</script>
